@@ -9,3 +9,8 @@ Here I will build a website to showcase my projects, display my CV, and store va
 * The core site use [Jekyll](https://jekyllrb.com/) That allows to write content quickly using [Markdown](https://www.markdownguide.org/)
 * I plan to modify the default theme to use [Material Design for Bootstrap](https://mdbootstrap.com/docs/jquery/)
 * and add some content
+
+# Tutorials
+
+* [Setup Workspace](tutorials/setup.md): Setup your machine to work with version control system (Git & Visual Studio Code)
+* [Git](tutorials/git.md): Clone a repo, and branching model
