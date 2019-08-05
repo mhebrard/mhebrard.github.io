@@ -6,7 +6,7 @@ layout: default
 Setup your machine to work with version control system.
 
 ## Version Control System
-[Git](https://git-scm.com/downloads) is a version control System that allows team development and version control.
+[Git](https://git-scm.com/downloads) is a version control system that facilitate code sharing and team work.
 
 ### [Windows]
 * Download Git for Windows
@@ -25,16 +25,16 @@ git --version
 
 ## Text Editor
 [Visual Studio Code](https://code.visualstudio.com/) is a text editor that become handy to develop modern applications
-* Download Code
-* Install Code
-* Open Code
+* Download vsCode
+* Install vsCode
+* Open vsCode
 * Install extensions
     * In the left menu, click on the 5th icon `Extentions` or in the top menu select `View / Extensions`
     * Search for `Material Icon Theme` and click `install`.
     * Click on `reload` button in the extension lists, then `activate` in the popup.
     * Search for `Git Graph` and click `install`
 
-## SSH Keys
+## Create SSH Key
 GitHub and GitLab provide two type of connections. by HTTP, you will need to enter your credentials at each action. By SSH you can create a key pair that will be use by the Git* provider to identify your machine automatically.
 
 * Create a new key
@@ -78,6 +78,27 @@ At this point Windows required some more configuration (Window 10)
     * Set the Startup type to `Automatic`
     * Click on `Start`
     * Click on `OK`
+
+## Register SSH Key
+You need to register the SSH key to the Git* provider. 
+
+### [Github]
+* Login on GitHub
+* On the top right corner, click on your avatar and select `Settings`
+* Select `SSH and GPG keys`
+* Click on `New SSH Key`
+* Enter a Title
+* Copy / Paste the content of `~/.ssh/github_rsa.pub`
+* Click `Add SSH key`
+
+### [Gitlab]
+* Login on GitLAb
+* On the top right corner, click on your avatar and select `Settings`
+* Select `SSH keys`
+* Click on `New SSH Key`
+* Copy / Paste the content of `~/.ssh/gitlab_rsa.pub`
+* Enter a Title
+* Click `Add key`
 
 ## END
 You are all set. Next, you can learn how to [clone a repo](tutorual/git.md)
