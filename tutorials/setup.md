@@ -101,4 +101,4 @@ You need to register the SSH key to the Git* provider.
 * Click `Add key`
 
 ## END
-You are all set. Next, you can learn how to use Git in the [next tutorial](tutorials/git.md)
+You are all set. Next, you can learn how to use Git in the [next tutorial](tutorials/git.html)

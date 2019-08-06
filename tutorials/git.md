@@ -33,7 +33,7 @@ GitFlow define some best practice in term of branching.
   * `feature` is deleted after merged
 
 ## Usage
-First you need to [Setup Workspace](tutorials/setup.md).
+First you need to [Setup Workspace](tutorials/setup.html).
 
 ### Clone a repo
 * Login on Git* website,

@@ -12,5 +12,6 @@ Here I will build a website to showcase my projects, display my CV, and store va
 
 # Tutorials
 
-* [Setup Workspace](tutorials/setup.md): Setup your machine to work with version control system (Git & Visual Studio Code)
-* [Git](tutorials/git.md): Clone a repo, and branching model
+* [Setup Workspace](tutorials/setup.html): Setup your machine to work with version control system (Git & Visual Studio Code)
+* [Git](tutorials/git.html): Clone a repo, and branching model
+* [GitHub Pages](tutorials/pages.html): 
