@@ -6,7 +6,7 @@ layout: default
 Setup your machine to work with version control system.
 
 ## Version Control System
-[Git](https://git-scm.com/downloads) is a version control system that facilitate code sharing and team work.
+[Git](https://git-scm.com/downloads) is a version control system. It allows to keep track of any modifictation of files and facilitate code sharing.
 
 ### [Windows]
 * Download Git for Windows
@@ -101,4 +101,4 @@ You need to register the SSH key to the Git* provider.
 * Click `Add key`
 
 ## END
-You are all set. Next, you can learn how to [clone a repo](tutorual/git.md)
+You are all set. Next, you can learn how to use Git in the [next tutorial](tutorials/git.md)
