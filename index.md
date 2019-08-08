@@ -14,4 +14,4 @@ Here I will build a website to showcase my projects, display my CV, and store va
 
 * [Setup Workspace](tutorials/setup.html): Setup your machine to work with version control system (Git & Visual Studio Code)
 * [Git](tutorials/git.html): Clone a repo, and branching model
-* [GitHub Pages](tutorials/pages.html): 
+* [GitHub Pages](tutorials/page.html): Setup personal GitHub page

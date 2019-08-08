@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Setup Workspace
+# Setup Workspace (2019-08-08)
 Setup your machine to work with version control system.
 
 ## Version Control System
@@ -29,10 +29,25 @@ git --version
 * Install vsCode
 * Open vsCode
 * Install extensions
-    * In the left menu, click on the 5th icon `Extentions` or in the top menu select `View / Extensions`
-    * Search for `Material Icon Theme` and click `install`.
-    * Click on `reload` button in the extension lists, then `activate` in the popup.
-    * Search for `Git Graph` and click `install`
+  * In the left menu, click on the 5th icon `Extentions` or in the top menu select `View / Extensions`
+  * Search for `Material Icon Theme` and click `install`.
+  * Click on `reload` button in the extension lists, then `activate` in the popup.
+  * Search for `Git Graph` and click `install`
+* Setting
+  * In the top menu, click on `File` and select `Preferences/Settings`
+  * Set `Editor: Tab Size` to `2`
+  * Set `Files: Eol` to `\n`
+
+* Open Terminal view
+  * In top menu click on `Terminal` and select `New Terminal`
+
+[Windows]
+
+On Windows, the terminal uses a DOS or PowerShell where Linux and MacOS use Bash. Git for Windows come with an installation of Bash that we can enable by defaukt in vsCode.
+* In the terminal view, click on the dropdown menu and select `Select Default Shell`
+* In the top menu, select `Git bash`
+* In the terminal view, click on the 3rd icon `Kill Terminal`
+* In top menu click on `Terminal` and select `New Terminal`
 
 ## Create SSH Key
 GitHub and GitLab provide two type of connections. by HTTP, you will need to enter your credentials at each action. By SSH you can create a key pair that will be use by the Git* provider to identify your machine automatically.
@@ -58,26 +73,26 @@ The command will then ask for a passphrase. Note that if you enter a passphrase,
 At this point Windows required some more configuration (Window 10)
 
 * ssh key config
-    * create `config` file
-    ```
-    touch C:\Users\{Username}\.ssh\config
-    ```
-    * edit `config` file
-    ```
-    Host gitlab.com
-	    IdentityFile ~/.ssh/gitlab_rsa
-    Host github.com
-	    IdentityFile ~/.ssh/github_rsa
-    ```
+  * create `config` file
+  ```
+  touch C:\Users\{Username}\.ssh\config
+  ```
+  * edit `config` file
+  ```
+  Host gitlab.com
+    IdentityFile ~/.ssh/gitlab_rsa
+  Host github.com
+    IdentityFile ~/.ssh/github_rsa
+  ```
 * ssh agent config
-    * Open the Task Manager
-    * Select the tab `Services`
-    * Click on `Open services`
-    * Search for `OpenSSH Authentification Agent`
-    * Right click and select `Properties`
-    * Set the Startup type to `Automatic`
-    * Click on `Start`
-    * Click on `OK`
+  * Open the Task Manager
+  * Select the tab `Services`
+  * Click on `Open services`
+  * Search for `OpenSSH Authentification Agent`
+  * Right click and select `Properties`
+  * Set the Startup type to `Automatic`
+  * Click on `Start`
+  * Click on `OK`
 
 ## Register SSH Key
 You need to register the SSH key to the Git* provider. 

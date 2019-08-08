@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Git
+# Git (2019-08-08)
 Git is a version control system. It allows to keep track of any modifictation of files and facilitate code sharing.
 
 ## Introduction
