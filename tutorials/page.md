@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# GitHub Pages (2019-08-078
+# GitHub Pages (2019-08-08)
 Setup personal GitHub page. It is free and easy to setup a CV or portfolio online.
 
 ## Create the repository
