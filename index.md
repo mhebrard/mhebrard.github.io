@@ -11,7 +11,10 @@ Here I will build a website to showcase my projects, display my CV, and store va
 * and add some content
 
 # Tutorials
-
+## Workspace
 * [Setup Workspace](tutorials/setup.html): Setup your machine to work with version control system (Git & Visual Studio Code)
 * [Git](tutorials/git.html): Clone a repo, and branching model
+
+## Web
 * [GitHub Pages](tutorials/page.html): Setup personal GitHub page
+* [Jekyll X MDB](tutorials/jekyll-mdb.html): Style GitHub page using Material Design Bootstrap
