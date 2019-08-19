@@ -4,6 +4,8 @@ layout: default
 # Changelog
 
 ## [Unreleased]
+### Added
+- Tutorial: Jekyll Template
 
 ## 2019-08-08
 ### Added

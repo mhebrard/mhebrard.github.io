@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: main
 ---
 
 # Welcome
@@ -17,4 +17,4 @@ Here I will build a website to showcase my projects, display my CV, and store va
 
 ## Web
 * [GitHub Pages](tutorials/page.html): Setup personal GitHub page
-* [Jekyll X MDB](tutorials/jekyll-mdb.html): Style GitHub page using Material Design Bootstrap
+* [Jekyll Template](tutorials/jekyll.html): Modify Jekyll templates
