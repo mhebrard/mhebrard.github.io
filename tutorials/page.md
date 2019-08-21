@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# GitHub Pages (2019-08-08)
+# GitHub Pages (2019-08-21)
 Setup personal GitHub page. It is free and easy to setup a CV or portfolio online.
 
 ## Create the repository
@@ -44,10 +44,20 @@ From here, we could directly edit the pages on GitHub and commit/push the modifi
   ```
   source 'https://rubygems.org'
   gem 'github-pages', group: :jekyll_plugins
+  gem 'wdm', '>= 0.1.0' if Gem.win_platform?
   ```
   * In the Terminal run the command
   ```
   bundle install
+  ```
+* Configure Cayman theme
+  * Edit `_config.yml`
+  ```yml
+  theme: jekyll-theme-cayman # Jekyll default theme
+  title: Maxime HEBRARD # Website title
+  description: Bio-Informatician # Website description
+  show_downloads: false # Theme header button
+  github: [metadata] # auto fetch github info
   ```
 * Start local server
   * In the Terminal run the command
