@@ -11,13 +11,17 @@
         gtag('config', '{{ site.google_analytics }}');
       </script>
     {% endif %}
-    <meta charset="UTF-8">
 
-{% seo %}
+    <meta charset="UTF-8">
+    {% seo %}
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#157878">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
+    <!-- Material Design Bootstrap -->
+    <link rel="stylesheet" href="/assets/css/mdb.min.css" >
   </head>
   <body>
     <header class="page-header" role="banner">

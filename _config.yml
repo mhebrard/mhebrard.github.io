@@ -2,3 +2,5 @@ theme: jekyll-theme-cayman
 title: Maxime HEBRARD
 description: Bio-Informatician
 show_downloads: false
+github:
+  is_project_page: false

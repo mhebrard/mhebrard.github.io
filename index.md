@@ -1,5 +1,7 @@
 ---
 layout: main
+title: Welcome
+description: Personal page of Maxime HEBRARD
 ---
 
 # Welcome
@@ -18,3 +20,4 @@ Here I will build a website to showcase my projects, display my CV, and store va
 ## Web
 * [GitHub Pages](tutorials/page.html): Setup personal GitHub page
 * [Jekyll Template](tutorials/jekyll.html): Modify Jekyll templates
+* [Material Design Bootstrap](tutorials/mdb.html): Style and features following FontAwesome, Material Design and Boostrap framework
