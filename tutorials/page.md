@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: GitHub Pages
+description: Personal web page
 ---
 
 # GitHub Pages (2019-08-21)

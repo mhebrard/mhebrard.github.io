@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: Jekyll
+description: Modify Jekyll templates
 ---
 
 
