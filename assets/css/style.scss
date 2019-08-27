@@ -1,0 +1,50 @@
+---
+---
+
+@charset "utf-8";
+
+// Variables Overwrite
+$primary-color: #800080;
+$secondary-color: #EE7D1A;
+
+// Import Cayman theme
+@import "{{ site.theme }}";
+// Import MDB theme
+@import "mdb/mdb";
+
+// Main layout
+a {
+  color: $secondary-color;
+}
+.main-content {
+  margin-top: 56px;
+}
+.main-content h1, .main-content h2, .main-content h3, .main-content h4, .main-content h5, .main-content h6 {
+  color: $primary-color;
+}
+
+// mdb.md
+.palette {
+  display: flex;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.palette .color {
+  height: 64px;
+  width: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  cursor: default;
+}
+.palette .color.selected {
+  border-radius: 50%;
+  font-weight: bold;
+}
+.palette.primary .color {
+  color: #FFFFFF;
+}
+.palette.secondary .color {
+  color: #000000;
+}

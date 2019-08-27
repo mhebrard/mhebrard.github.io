@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: Welcome
+description: Personal page of Maxime HEBRARD
 ---
 
 # Welcome
@@ -11,8 +13,12 @@ Here I will build a website to showcase my projects, display my CV, and store va
 * and add some content
 
 # Tutorials
-
+## Workspace
 * [Setup Workspace](tutorials/setup.html): Setup your machine to work with version control system (Git & Visual Studio Code)
 * [Git](tutorials/git.html): Clone a repo, and branching model
-* [GitHub Pages](tutorials/page.html): Setup personal GitHub page
 * [Amazon Web Server](tutorials/aws.html): Setup and usage of AWS
+
+## Web
+* [GitHub Pages](tutorials/page.html): Setup personal GitHub page
+* [Jekyll Template](tutorials/jekyll.html): Modify Jekyll templates
+* [Material Design Bootstrap](tutorials/mdb.html): Style and features following FontAwesome, Material Design and Boostrap framework

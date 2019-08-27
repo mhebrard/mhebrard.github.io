@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: Git
+description: A version control system.
 ---
 
 # Git (2019-08-08)

@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: Setup Workspace
+description: Setup your machine
 ---
 
 # Setup Workspace (2019-08-08)

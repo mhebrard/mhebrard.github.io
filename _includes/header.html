@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: 'en-US' }}">
+  <head>
+
+    {% if site.google_analytics %}
+      <script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+      <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', '{{ site.google_analytics }}');
+      </script>
+    {% endif %}
+
+    <meta charset="UTF-8">
+    {% seo %}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#157878">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
+    <!-- Main Style -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  </head>
+  <body>
+    <header>
+      <!--Navbar -->
+      <nav class="navbar navbar-expand-lg fixed-top navbar-dark primary-color mb-1">
+        <!-- Brand -->
+        <a class="navbar-brand" href="#">Maxime HEBRARD</a>
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapsible">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- Collapsible content -->
+        <div class="collapse navbar-collapse" id="navCollapsible">
+          <!-- Links -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="/index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">C.V.</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" href="/tutorials.html">Tutorials</a>
+              <div class="dropdown-menu dropdown-default">
+                <a class="dropdown-item" href="/tutorials/setup.html">Setup Workspace</a>
+                <a class="dropdown-item" href="/tutorials/git.html">Git</a>
+                <a class="dropdown-item" href="/tutorials/page.html">GitHub Pages</a>
+                <a class="dropdown-item" href="/tutorials/jekyll.html">Jekyll Template</a>
+                <a class="dropdown-item" href="/tutorials/mdb.html">Material Design Bootstrap</a>
+              </div>
+            </li>
+          </ul>
+          <!-- Socials -->
+          <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/mhebrard" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.researchgate.net/profile/Maxime_Hebrard" target="_blank">
+                  <i class="fab fa-researchgate"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://www.linkedin.com/in/maxime-hebrard-96267942" target="_blank">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://twitter.com/MaximeHebrard" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <!--/.Navbar -->
+    </header>

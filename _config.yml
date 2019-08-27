@@ -1,5 +1,5 @@
-theme: jekyll-theme-cayman
-title: Maxime HEBRARD
-description: Bio-Informatician
-show_downloads: false
-github: [metadata]
+theme: jekyll-theme-cayman # Jekyll default theme
+title: Maxime HEBRARD # Website title
+description: Personal page of Maxime HEBRARD # Website description
+show_downloads: false # Theme header button
+github: [metadata] # auto fetch github info
