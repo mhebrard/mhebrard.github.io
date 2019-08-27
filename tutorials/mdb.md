@@ -1,5 +1,11 @@
 ---
 layout: main
+description: ---
+primary:
+ 900: "#55006b"
+ 800: "#710078"
+ 700: "#800080"
+ 600: "#910887"
 ---
 
 # Material Design Bootstrap (2019-08-19)
@@ -8,37 +14,170 @@ Style and features following [FontAwesome](https://fontawesome.com), [Material D
 ## Installation
 * Download FontAwesome from [here](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 * Extract the archive
-* Copy ```/js/all.min.js``` to ```/js/fontawesome.min.js```
+* Copy ```/js/all.min.js``` to ```assets/js/fontawesome.min.js```
 * Download the free version of MDB from [here](https://mdbootstrap.com/docs/jquery/getting-started/download/)
 * Extract the archive
-* Copy ```/css/bootstrap.min.css``` into the project
-* Copy ```/css/mdb.min.css``` into the project
-* Copy ```/js/jquery-3.4.1.min.js``` into the project
-* Copy ```/js/popper.min.js``` into the project
-* Copy ```/js/bootstrap.min.js``` into the project
-* Copy ```/js/mdb.min.js``` into the project
-* Copy the folder ```/font/``` into the project
+* Copy ```/css/bootstrap.min.css``` to ```assets/css/bootstrap.min.css```
+* Copy the folder ```/scss/``` to ```_sass/mdb/```
+* Copy ```/js/jquery-3.4.1.min.js``` to ```assets/js/jquery-3.4.1.min.js``
+* Copy ```/js/popper.min.js``` to ```assets/js/popper.min.js```
+* Copy ```/js/bootstrap.min.js``` to ```assets/js/bootstrap.min.js```
+* Copy ```/js/mdb.min.js``` to ```assets/js/mdb.min.js```
+* Copy the folder ```/font/``` to ```assets/font/```
 * Edit ```/_includes/header.html```
+{% raw %}
 ```html
-<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
-<!-- Font Awesome -->
-<link rel="stylesheet" href="js/fontawesome.min.js">
 <!-- Bootstrap core CSS -->
-<link rel="stylesheet" href="css/bootstrap.min.css" >
-<!-- Material Design Bootstrap -->
-<link rel="stylesheet" href="css/mdb.min.css" >
+<link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
+<!-- Main Style -->
+<link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 ```
+{% endraw %}
 * Edit ```/_includes/footer.html```
+{% raw %}
 ```html
 </footer>
 
   <!-- SCRIPTS -->
+  <!-- Font Awesome -->
+  <script type="text/javascript" src="/assets/js/fontawesome.min.js"></script>
   <!-- JQuery -->
-  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="/assets/js/jquery-3.4.1.min.js"></script>
   <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="js/popper.min.js"></script>
+  <script type="text/javascript" src="/assets/js/popper.min.js"></script>
   <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/assets/js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
-  <script type="text/javascript" src="js/mdb.min.js"></script>
+  <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
+```
+{% endraw %}
+* Create and edit ```/assets/css/style.scss```
+
+```scss
+---
+---
+
+@charset "utf-8";
+
+// Import Cayman theme
+@import "{{ site.theme }}";
+// Import MDB theme
+@import "mdb/mdb";
+```
+
+## Colors
+Material Design is based on 2 colors palette. We can take a look [here](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) and pickup our colors.
+
+<div class="palette">
+  <ul>
+    <li></li>
+    <li>
+  </ul>  
+</div>
+
+<div  class="primary-colour">P</div>
+<div id="secondary-colour" class="secondary-colour">S</div>
+
+## Components
+### Navbar
+<!--Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color mb-1">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Brand</a>
+  <!-- Toggler -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapsible">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navCollapsible">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">Dropdown</a>
+        <div class="dropdown-menu dropdown-default">
+          <a class="dropdown-item" href="#">Link A</a>
+          <a class="dropdown-item" href="#">Link B</a>
+        </div>
+      </li>
+    </ul>
+    <!-- Socials -->
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
+
+```html
+<!--Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark primary-color mb-1">
+  <!-- Brand -->
+  <a class="navbar-brand" href="#">Brand</a>
+  <!-- Toggler -->
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navCollapsible">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <!-- Collapsible content -->
+  <div class="collapse navbar-collapse" id="navCollapsible">
+    <!-- Links -->
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home
+          <span class="sr-only">(current)</span>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link 1</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" id="dropdownMenu" data-toggle="dropdown">Dropdown</a>
+        <div class="dropdown-menu dropdown-default">
+          <a class="dropdown-item" href="#">Link A</a>
+          <a class="dropdown-item" href="#">Link B</a>
+        </div>
+      </li>
+    </ul>
+    <!-- Socials -->
+    <ul class="navbar-nav ml-auto nav-flex-icons">
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-twitter"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<!--/.Navbar -->
 ```
