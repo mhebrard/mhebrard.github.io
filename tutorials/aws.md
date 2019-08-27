@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Amazon Web Server (2019-08-21)
+# Amazon Web Server (2019-08-27)
 Setup and usage of AWS
 
 ## Login to Management console (web)
@@ -11,7 +11,7 @@ Setup and usage of AWS
 * Enter Credentials
 
 ## Create bucket
-* From management console, click on Storage/S3
+* From management console, click on ```Storage/S3```
 * Click on ```Create bucket```
 * Enter a name (no space, no caps, no special character)
 * Click on ```Next```
@@ -30,7 +30,7 @@ Setup and usage of AWS
 * Click on ```Next```
 * Select policy
 * Click on ```Next Step```
-* Click ```Create Group```
+* Click on ```Create Group```
 
 ## Create a new user
 * Visite https://console.aws.amazon.com/iam/
@@ -40,7 +40,7 @@ Setup and usage of AWS
 * Check both Access type : ```Programmatic access``` and ```AWS Management Console access```
 * Keep option ```Autogenerate password``` selected
 * Check ```Require password reset```
-* Click ```Next: Permissions```
+* Click on ```Next: Permissions```
 * Select a group for the user
 * Click on ```Next: Tags```
 * Click on ```Next: Review```
@@ -120,3 +120,23 @@ aws s3 cp s3://[bucket]/[Folder] /[pathToFolder] --recursive
 ```
 aws s3 sync s3://[bucket]/[folder] /[pathToLocalFolder]
 ```
+
+## Transfer Bucket to Glacier
+We can configure a bucket to be transfer from S3 to Glacier after few days or even directly after creation. Note that Glacier is not meant to store small files. It is recommanded to create one archive (.tar) to regroup files into one unique object prior to store it to Glacier.
+* From management console, click on ```Storage/S3```
+* Click on the bucket name
+* Click on ```Management```
+* Click on ```Lifecycle/Add lifecycle rule```
+* Enter a name (toGlacier)
+* Click on ```Next```
+* Select ```Current version```
+* Click on ```Add transition```
+* Select ```Transition to Glacier```
+* Set to ```0``` days
+* Check that you acknowledge the warning message
+* Click on ```Next```
+* Click on ```Next```
+* Click on ```Save```
+* Copy archives into the bucket (see section above)
+
+## END
