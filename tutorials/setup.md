@@ -4,7 +4,7 @@ title: Setup Workspace
 description: Setup your machine
 ---
 
-# Setup Workspace (2019-08-08)
+# Setup Workspace (2019-09-03)
 Setup your machine to work with version control system.
 
 ## Version Control System
@@ -13,6 +13,12 @@ Setup your machine to work with version control system.
 ### [Windows]
 * Download Git for Windows
 * Install Git
+  * Check option: `use Vim (the ubiquitous text editor) as Git's default editor`
+  * Check option: `Git from the command line and also from 3rd-party software`
+  * Check option: `use OpenSSL library`
+  * Check option: `checkout as-is, commit Unix-style line endings`
+  * Check option: `use MinTTY (the default terminal of MSYS2)`
+  * Check option: `Enable symbolic links`
 
 ### [Linux / MacOS]
 * check that Git is already installed
@@ -32,9 +38,12 @@ git --version
 * Open vsCode
 * Install extensions
   * In the left menu, click on the 5th icon `Extentions` or in the top menu select `View / Extensions`
-  * Search for `Material Icon Theme` and click `install`.
-  * Click on `reload` button in the extension lists, then `activate` in the popup.
+  * Search for `Material Icon Theme` and click `install`
+  * Click on `activate` in the popup.
   * Search for `Git Graph` and click `install`
+  * Search for `GitKraken Glo` and click `install`
+  * In the bottom menu, click on `Glo`
+  * Sign in Glo
 * Setting
   * In the top menu, click on `File` and select `Preferences/Settings`
   * Set `Editor: Tab Size` to `2`
@@ -54,6 +63,15 @@ On Windows, the terminal uses a DOS or PowerShell where Linux and MacOS use Bash
 ## Create SSH Key
 GitHub and GitLab provide two type of connections. by HTTP, you will need to enter your credentials at each action. By SSH you can create a key pair that will be use by the Git* provider to identify your machine automatically.
 
+* Change directory to `~/.ssh`
+```
+cd ~/.ssh
+```
+* If the directory don't exist yet, create it and change directory
+```
+mkdir ~/.ssh
+cd ~/.ssh
+```
 * Create a new key
 ```
 ssh-keygen -t rsa -b 4096
@@ -61,10 +79,6 @@ ssh-keygen -t rsa -b 4096
 * Name the key file
 
 The command above will ask to name the key file. I usually rename the key according to the Git* provider `gitlab_rsa` or `github_rsa`. Please take care to save the key in the default folder
-
-> [Windows] `C:\Users\{Username}\.ssh\github_rsa`
-
-> [Linux] `/home/{Username}/.ssh/gitlab_rsa`
 
 * Enter a Passphrase
 
@@ -74,7 +88,7 @@ The command will then ask for a passphrase. Note that if you enter a passphrase,
 
 At this point Windows required some more configuration (Window 10)
 
-* ssh key config
+* Config ssh key
   * create `config` file
   ```
   touch C:\Users\{Username}\.ssh\config
@@ -86,7 +100,7 @@ At this point Windows required some more configuration (Window 10)
   Host github.com
     IdentityFile ~/.ssh/github_rsa
   ```
-* ssh agent config
+* Start ssh agent
   * Open the Task Manager
   * Select the tab `Services`
   * Click on `Open services`
@@ -95,6 +109,18 @@ At this point Windows required some more configuration (Window 10)
   * Set the Startup type to `Automatic`
   * Click on `Start`
   * Click on `OK`
+
+* Add keys to the ssh agent
+```
+/c/Windows/System32/OpenSSH/ssh-add.exe
+```
+* Add the Git* provider to the list of known host
+```
+ssh git@gitlab.com
+yes
+ssh git@github.com
+yes
+```
 
 ## Register SSH Key
 You need to register the SSH key to the Git* provider. 
