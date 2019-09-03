@@ -1,5 +1,7 @@
 ---
-layout: default
+layout: main
+title: Amazon Web Server
+description: Setup and usage of AWS
 ---
 
 # Amazon Web Server (2019-08-27)
