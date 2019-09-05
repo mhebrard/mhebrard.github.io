@@ -1,16 +1,15 @@
 ---
 layout: main
-title: Setup Workspace
+title: Setup Workspace (2019-09-03)
 description: Setup your machine
 ---
 
-# Setup Workspace (2019-09-03)
-Setup your machine to work with version control system.
-
 ## Version Control System
+
 [Git](https://git-scm.com/downloads) is a version control system. It allows to keep track of any modifictation of files and facilitate code sharing.
 
 ### [Windows]
+
 * Download Git for Windows
 * Install Git
   * Check option: `use Vim (the ubiquitous text editor) as Git's default editor`
@@ -21,18 +20,24 @@ Setup your machine to work with version control system.
   * Check option: `Enable symbolic links`
 
 ### [Linux / MacOS]
+
 * check that Git is already installed
-```
+
+```sh
 git --version
 ```
 
 ## Code Repository
+
 [GitHub](https://github.com/) or [GitLab](https://gitlab.com/) are online repositories that comes with handy tools for project management and especially version control.
+
 * Create an account on [GitHub](https://github.com/) or [GitLab](https://gitlab.com/)
 * Create a new repository from the Git* website
 
 ## Text Editor
+
 [Visual Studio Code](https://code.visualstudio.com/) is a text editor that become handy to develop modern applications
+
 * Download vsCode
 * Install vsCode
 * Open vsCode
@@ -44,6 +49,7 @@ git --version
   * Search for `GitKraken Glo` and click `install`
   * In the bottom menu, click on `Glo`
   * Sign in Glo
+  * Search for `markdownlint` and click `install`
 * Setting
   * In the top menu, click on `File` and select `Preferences/Settings`
   * Set `Editor: Tab Size` to `2`
@@ -55,27 +61,35 @@ git --version
 [Windows]
 
 On Windows, the terminal uses a DOS or PowerShell where Linux and MacOS use Bash. Git for Windows come with an installation of Bash that we can enable by defaukt in vsCode.
+
 * In the terminal view, click on the dropdown menu and select `Select Default Shell`
 * In the top menu, select `Git bash`
 * In the terminal view, click on the 3rd icon `Kill Terminal`
 * In top menu click on `Terminal` and select `New Terminal`
 
 ## Create SSH Key
+
 GitHub and GitLab provide two type of connections. by HTTP, you will need to enter your credentials at each action. By SSH you can create a key pair that will be use by the Git* provider to identify your machine automatically.
 
 * Change directory to `~/.ssh`
-```
+
+```sh
 cd ~/.ssh
 ```
+
 * If the directory don't exist yet, create it and change directory
-```
+
+```sh
 mkdir ~/.ssh
 cd ~/.ssh
 ```
+
 * Create a new key
-```
+
+```sh
 ssh-keygen -t rsa -b 4096
 ```
+
 * Name the key file
 
 The command above will ask to name the key file. I usually rename the key according to the Git* provider `gitlab_rsa` or `github_rsa`. Please take care to save the key in the default folder
@@ -90,16 +104,20 @@ At this point Windows required some more configuration (Window 10)
 
 * Config ssh key
   * create `config` file
-  ```
+
+  ```sh
   touch C:\Users\{Username}\.ssh\config
   ```
+
   * edit `config` file
-  ```
+
+  ```txt
   Host gitlab.com
     IdentityFile ~/.ssh/gitlab_rsa
   Host github.com
     IdentityFile ~/.ssh/github_rsa
   ```
+
 * Start ssh agent
   * Open the Task Manager
   * Select the tab `Services`
@@ -111,11 +129,14 @@ At this point Windows required some more configuration (Window 10)
   * Click on `OK`
 
 * Add keys to the ssh agent
-```
+
+```sh
 /c/Windows/System32/OpenSSH/ssh-add.exe
 ```
+
 * Add the Git* provider to the list of known host
-```
+
+```sh
 ssh git@gitlab.com
 yes
 ssh git@github.com
@@ -123,9 +144,11 @@ yes
 ```
 
 ## Register SSH Key
-You need to register the SSH key to the Git* provider. 
+
+You need to register the SSH key to the Git* provider.
 
 ### [Github]
+
 * Login on GitHub
 * On the top right corner, click on your avatar and select `Settings`
 * Select `SSH and GPG keys`
@@ -135,6 +158,7 @@ You need to register the SSH key to the Git* provider.
 * Click `Add SSH key`
 
 ### [Gitlab]
+
 * Login on GitLAb
 * On the top right corner, click on your avatar and select `Settings`
 * Select `SSH keys`
@@ -144,4 +168,5 @@ You need to register the SSH key to the Git* provider.
 * Click `Add key`
 
 ## END
+
 You are all set. Next, you can learn how to use Git in the [next tutorial](/tutorials/git.html)

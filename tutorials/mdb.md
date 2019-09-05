@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Material Design Bootstrap
+title: Material Design Bootstrap (2019-08-19)
 description: Style and features
 primary: 
   900: '#55006b'
@@ -29,10 +29,10 @@ selected:
   secondary: 900
 ---
 
-# Material Design Bootstrap (2019-08-19)
-Style and features following [FontAwesome](https://fontawesome.com), [Material Design](https://material.io/) and [Boostrap](https://getbootstrap.com/) framework
+Follow: [FontAwesome](https://fontawesome.com), [Material Design](https://material.io/) and [Boostrap](https://getbootstrap.com/) framework
 
 ## Installation
+
 * Download FontAwesome from [here](https://fontawesome.com/how-to-use/on-the-web/setup/hosting-font-awesome-yourself)
 * Extract the archive
 * Copy ```/js/all.min.js``` to ```assets/js/fontawesome.min.js```
@@ -46,16 +46,22 @@ Style and features following [FontAwesome](https://fontawesome.com), [Material D
 * Copy ```/js/mdb.min.js``` to ```assets/js/mdb.min.js```
 * Copy the folder ```/font/``` to ```assets/font/```
 * Edit ```/_includes/header.html```
+
 {% raw %}
+
 ```html
 <!-- Bootstrap core CSS -->
 <link rel="stylesheet" href="/assets/css/bootstrap.min.css" >
 <!-- Main Style -->
 <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
 ```
+
 {% endraw %}
+
 * Edit ```/_includes/footer.html```
+
 {% raw %}
+
 ```html
 </footer>
 
@@ -71,7 +77,9 @@ Style and features following [FontAwesome](https://fontawesome.com), [Material D
   <!-- MDB core JavaScript -->
   <script type="text/javascript" src="/assets/js/mdb.min.js"></script>
 ```
+
 {% endraw %}
+
 * Create and edit ```/assets/css/style.scss```
 
 ```scss
@@ -87,6 +95,7 @@ Style and features following [FontAwesome](https://fontawesome.com), [Material D
 ```
 
 ## Colors
+
 Material Design is based on 2 colors palette. We can take a look [here](https://material.io/design/color/the-color-system.html#tools-for-picking-colors) and pickup our colors.
 
 <div class="palette primary">
@@ -131,7 +140,9 @@ $secondary-color: #EE7D1A;
 ```
 
 ## Components
+
 ### Navbar
+
 <!--Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color mb-1">
   <!-- Brand -->
@@ -233,6 +244,7 @@ $secondary-color: #EE7D1A;
 </nav>
 <!--/.Navbar -->
 ```
+
 * Option fixed-top
 We can make the navbar always visible on the top of the page by adding the class ```fixed-top``` to the ```nav``` element. We notice that the content of the page is now under the navbar. We need to add margin on top of our content to make space for the navbar.
 
@@ -240,6 +252,7 @@ We can make the navbar always visible on the top of the page by adding the class
 <!-- Edit /_includes/header.html -->
 <nav class="navbar navbar-expand-lg navbar-dark primary-color mb-1 fixed-top">
 ```
+
 ```scss
 // Edit /assets/css/style.scss
 .main-content {

@@ -1,18 +1,17 @@
 ---
 layout: main
-title: Amazon Web Server
+title: Amazon Web Server (2019-08-27)
 description: Setup and usage of AWS
 ---
 
-# Amazon Web Server (2019-08-27)
-Setup and usage of AWS
-
 ## Login to Management console (web)
-* Visit AWS website at https://aws.amazon.com/console/
+
+* Visit AWS website [Here](https://aws.amazon.com/console/)
 * Click on ```Sign In to the Console```
 * Enter Credentials
 
 ## Create bucket
+
 * From management console, click on ```Storage/S3```
 * Click on ```Create bucket```
 * Enter a name (no space, no caps, no special character)
@@ -25,7 +24,8 @@ Setup and usage of AWS
 * Click on ```Create bucket```
 
 ## Create a new group
-* Visite https://console.aws.amazon.com/iam/
+
+* Visite [IAM](https://console.aws.amazon.com/iam/)
 * Click on ```Groups```
 * Click on ```Create New Group```
 * Enter a group name
@@ -35,7 +35,8 @@ Setup and usage of AWS
 * Click on ```Create Group```
 
 ## Create a new user
-* Visite https://console.aws.amazon.com/iam/
+
+* Visite [IAM](https://console.aws.amazon.com/iam/)
 * Click on ```Users```
 * Click on ```Add user```
 * Enter a user name
@@ -53,6 +54,7 @@ Setup and usage of AWS
 * Communicate the credentials to the new user in a separate email
 
 ## Connect to AWS with new account
+
 * Check your emails
 * Follow the link to ```Sign-in URL```
 * Enter IAM user name
@@ -61,31 +63,43 @@ Setup and usage of AWS
 * Enter new password
 * Retype new password
 
-## Setup AWS CLI on Linux:
+## Setup AWS CLI on Linux
+
 * update pip
-```
+
+```sh
 sudo pip install --index-url=https//pypi.python.org/simple/ --upgrade pip
 ```
+
 * add pip to $PATH
-```
+
+```sh
 sudo gedit .bashrc
 ```
+
 > #Add line:
 >
 > export PATH=$PATH:/usr/local/bin
+
 * install AWS CLI
-```
+
+```sh
 pip install awscli --upgrade --user
 ```
+
 * add aws to $PATH
-```
+
+```sh
 sudo gedit .bashrc
 ```
+
 > #Add line:
 >
 > export PATH=$PATH:~/.local/bin
-* configure awscli (change [...] values to fit your credentials, for regions see (https://docs.aws.amazon.com/general/latest/gr/rande.html#apigateway_region)
-```
+
+* configure awscli (change [...] values to fit your credentials, for regions see ([Regions](https://docs.aws.amazon.com/general/latest/gr/rande.html#apigateway_region))
+
+```sh
 aws configure --profile [myprofile]
 [AWS Access KEY ID]
 [AWS Secret Access Key]
@@ -94,37 +108,53 @@ text
 ```
 
 ## Explore, Upload & Download AWS s3
+
 * List the buckets
-```
+
+```sh
 aws s3 ls
 ```
+
 * List files in a bucket
-```
+
+```sh
 aws s3 ls s3://[bucket]
 ```
+
 * Upload a file on s3
-```
+
+```sh
 aws s3 cp /[pathToFile] s3://[bucket]/[pathToFile]
 ```
+
 * Download a file from s3
+
+```sh
+aws s3 cp s3://[bucket]/[pathToFile] /[pathToFile]
 ```
-aws s3 cp s3://[bucket]/[pathToFile] /[pathToFile] 
-```
+
 * Upload a folder on s3
-```
+
+```sh
 aws s3 cp /[pathToFolder] s3://[bucket]/[Folder] --recursive
 ```
+
 * Download a file from s3
-```
+
+```sh
 aws s3 cp s3://[bucket]/[Folder] /[pathToFolder] --recursive
 ```
+
 * Sync s3 folder with a local folder (upload and download simultaneously)
-```
+
+```sh
 aws s3 sync s3://[bucket]/[folder] /[pathToLocalFolder]
 ```
 
 ## Transfer Bucket to Glacier
+
 We can configure a bucket to be transfer from S3 to Glacier after few days or even directly after creation. Note that Glacier is not meant to store small files. It is recommanded to create one archive (.tar) to regroup files into one unique object prior to store it to Glacier.
+
 * From management console, click on ```Storage/S3```
 * Click on the bucket name
 * Click on ```Management```
