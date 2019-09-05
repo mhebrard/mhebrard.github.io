@@ -11,16 +11,16 @@ Here I will build a website to showcase my projects, display my CV, and store va
 * I plan to modify the default theme to use [Material Design for Bootstrap](https://mdbootstrap.com/docs/jquery/)
 * and add some content
 
-# Tutorials
+## Tutorials
 
-## Workspace
+### Workspace
 
 * [Setup Workspace](tutorials/setup.html): Setup your machine to work with version control system (Git & Visual Studio Code)
 * [Git](tutorials/git.html): Clone a repo, and branching model
 * [Amazon Web Server](tutorials/aws.html): Setup and usage of AWS
 * [Ubuntu on Windows](tutorials/ubuntu.html): Install ubuntu as a "Win10 app"
 
-## Web
+### Web
 
 * [GitHub Pages](tutorials/page.html): Setup personal GitHub page
 * [Jekyll Template](tutorials/jekyll.html): Modify Jekyll templates
