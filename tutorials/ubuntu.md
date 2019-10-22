@@ -12,7 +12,7 @@ description: Install ubuntu as a "Win10 app"
 * Check `Windows Subsystem for Linux`
 * Click on `Ok`
 * Click on `Restart now`
-* Open `Mucrosoft Store`
+* Open `Microsoft Store`
 * Search `Ubuntu`
 * Select `Ubuntu`
 * Click on `Get`

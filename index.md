@@ -20,6 +20,10 @@ Here I will build a website to showcase my projects, display my CV, and store va
 * [Amazon Web Server](tutorials/aws.html): Setup and usage of AWS
 * [Ubuntu on Windows](tutorials/ubuntu.html): Install ubuntu as a "Win10 app"
 
+### Programming
+
+* [Lesson 01](tutorials/lesson01.md): Introduction to programming.
+
 ### Web
 
 * [GitHub Pages](tutorials/page.html): Setup personal GitHub page
