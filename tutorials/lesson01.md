@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Lesson 01 (2019-10-22)
+title: Lesson 01 (2019-10-23)
 description: Introduction to programming.
 ---
 
@@ -69,8 +69,8 @@ Any data that we wish to use in our code should be store un a `variable`. A vari
 
 1. `number`: can be an integer (1) or a float (1.2) a e-notation (1e-2) or an hexadecimal (0xF), positive or negative.
 2. `string`: can be a character (a) or a text (hello word).
-3. `array`: it is a list of variables that are indexed using numbers (the first item in the array is index 0).
-4. `hash`: it is a collection of variables that are indexted using strings.
+3. `array`: it is a list of variables that are indexed using numbers. Note that the first item in the array is `index` 0.
+4. `hash`: it is a collection of variables that are indexed using strings. Note that for hash we usually do not talk about index, but about `key`.
 
 ```js
 /* Algo:

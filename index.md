@@ -23,6 +23,7 @@ Here I will build a website to showcase my projects, display my CV, and store va
 ### Programming
 
 * [Lesson 01](tutorials/lesson01.md): Introduction to programming.
+* [Lesson 02](tutorials/lesson02.md): Parse and format a list of articles.
 
 ### Web
 
