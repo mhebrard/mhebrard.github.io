@@ -1,6 +1,6 @@
 ---
 layout: main
-title: Lesson 01 (2019-10-23)
+title: Lesson 01 (2019-10-29)
 description: Introduction to programming.
 ---
 
@@ -61,7 +61,7 @@ In this section, we will prepare a webpage to experiment with our code and displ
 
 > We can see "JavaScript says Hello Word" appears below "HTML says Hello Word"
 
-At this point we have a web page in which we can write code and we can view the results using a web browser. 
+At this point we have a web page in which we can write code and we can view the results using a web browser.
 
 ## Variables
 
@@ -70,7 +70,7 @@ Any data that we wish to use in our code should be store un a `variable`. A vari
 1. `number`: can be an integer (1) or a float (1.2) a e-notation (1e-2) or an hexadecimal (0xF), positive or negative.
 2. `string`: can be a character (a) or a text (hello word).
 3. `array`: it is a list of variables that are indexed using numbers. Note that the first item in the array is `index` 0.
-4. `hash`: it is a collection of variables that are indexed using strings. Note that for hash we usually do not talk about index, but about `key`.
+4. `hashmap`: it is a collection of variables that are indexed using strings. Note that for hash we usually do not talk about index, but about `key`.
 
 ```js
 /* Algo:
@@ -80,7 +80,7 @@ string='some text'
 print string
 array=['A','B','C']
 print array and array[1]
-hash={first: 'A', second: 'B', third: 'C'}
+hashmap={first: 'A', second: 'B', third: 'C'}
 print hash and hash[second]
 */
 
@@ -90,8 +90,8 @@ var string = 'some text';
 console.log('string:', string);
 var array = ['A', 'B', 'C'];
 console.log('array:', array, 'array[1]:', array[1]);
-var hash = {first: 'A', second: 'B', third: 'C'};
-console.log('hash:', hash, 'hash[second]:', hash['second']);
+var hashmap = {first: 'A', second: 'B', third: 'C'};
+console.log('hashmap:', hashmap, 'hashmap[second]:', hashmap['second']);
 ```
 
 If we look back at the hello word section, we can see that we declare a variable named `msg` and store the string `JavaScript say "Hello Word"` in that variable.
@@ -102,8 +102,8 @@ A `function` is a serie of instructions grouped together under a `name`. Similar
 
 ```js
 /* Algo:
-function sum(x,y) {
-  result = x+y
+function sum(x, y) {
+  result = x + y
   print result
   return result
 }
