@@ -35,31 +35,43 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 * Open **Ubuntu**
 * Install [zsh](https://www.zsh.org/)
 
-  `sudo apt install zsh -y`
+  ```sh
+  sudo apt install zsh -y
+  ```
 
 * Set **zsh** as default shell
 
-  `chsh -s $(which zsh)`
+  ```sh
+  chsh -s $(which zsh)
+  ```
 
 * Close **Ubuntu**
 
-  `exit`
+  ```sh
+  exit
+  ```
 
 * Open **Ubuntu**
 * Setup **zsh** config file: Type `0`
 
 * Install [Oh My Zsh!](https://ohmyz.sh/)
 
-  `sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"`
+  ```sh
+  sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"
+  ```
 
 * Install plugins
   * **zsh-autosuggestions** provides autocompletion based on our previous commands
   
-    `git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions`
+    ```sh
+    git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+    ```
   
   * **zsh-syntax-highlighting** provides syntax highlighting.
   
-    `git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting`
+    ```sh
+    git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+    ```
   
   * **autojump** provides a smarter directory navigation system.
   
@@ -73,7 +85,9 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 
 * Fix directory permissions
 
-  `compaudit | xargs chmod g-w,o-w`
+  ```sh
+  compaudit | xargs chmod g-w,o-w
+  ```
 
 * Setup **ZSH** : edit ***~/.zshrc*** as follow
 
@@ -130,7 +144,9 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 
 * Install **Powerlevel10k** Theme
 
-  `git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k`
+  ```sh
+  git clone --depth=1 https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+  ```
 
 * Enable **Powerlevel10k** Theme: edit ***~/.zshrc*** as follow
 
@@ -140,7 +156,9 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 
 * Close **Ubuntu**
 
-  `exit`
+  ```sh
+  exit
+  ```
 
 * Open **Ubuntu**
 
@@ -165,7 +183,7 @@ WSL come with a minimal terminal. In this section, we will configure the termina
   * Instant Prompt Mode: `1`
   * Apply changes to ~/.zshrc?: `y`
 
-  At the end of the dialogue it will generate a file `~/.p10k.zsh` that we can manually edit if needed. We can for example look at **POWERLEVEL9K_LEFT_PROMPT_ELEMENTS** and **POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS** to choose which segment to display.
+  At the end of the dialogue it will generate a file ***~/.p10k.zsh*** that we can manually edit if needed. We can for example look at **POWERLEVEL9K_LEFT_PROMPT_ELEMENTS** and **POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS** to choose which segment to display.
 
 > Close and re-open Ubuntu and ww have a beautiful Prompt !
 
