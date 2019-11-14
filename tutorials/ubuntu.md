@@ -4,7 +4,7 @@ title: Ubuntu on Windows (2019-11-14)
 description: Install ubuntu as a "Win10 app"
 ---
 
-## Activate Windows subsystem for Linux
+## Activate Windows Subsystem for Linux
 
 Windows 10 allows to install Linux as an application. Here we will activate Windows Subsystem for Linux (WSL) then install Ubuntu from the Microsoft Store. This application take the form of a terminal and come with a full Ubuntu distribution. Note that we will not have any Graphic User Interface with this application, but we have access to all the command line tools. It is also good to know that Windows file system is automaticaly mount inside the linux file system so we can access our data seamlessly.
 
@@ -135,13 +135,11 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 
   * Download the 2 font files from the links above
   * Open each file and click on **Install**
-
 * Setup **WSL** to use **MesloLGS** font
   * Right click on the **Ubuntu icon** at the left top corner of **Ubuntu** terminal
   * Click on **Properties**
   * In the tab **Font**, select size: **18** and Font: **MesloLGS NF**
   * Click on **OK**
-
 * Install **Powerlevel10k** Theme
 
   ```sh
@@ -185,6 +183,6 @@ WSL come with a minimal terminal. In this section, we will configure the termina
 
   At the end of the dialogue it will generate a file ***~/.p10k.zsh*** that we can manually edit if needed. We can for example look at **POWERLEVEL9K_LEFT_PROMPT_ELEMENTS** and **POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS** to choose which segment to display.
 
-> Close and re-open Ubuntu and ww have a beautiful Prompt !
+> Close and re-open Ubuntu and we have a beautiful terminal !
 
 ## END
